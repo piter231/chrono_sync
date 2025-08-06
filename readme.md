@@ -1,8 +1,30 @@
 # Chrono-Sync: Temporal Paradox Solver
 
-![Terminal Game Screenshot](terminal_screenshot.png)
+![Gameplay Screenshot](https://github.com/piter231/chrono_sync/raw/main/terminal_screenshot.png)
 
-Chrono-Sync is a unique terminal-based time manipulation game where you play as a Temporal Analyst tasked with resolving paradoxes before the timeline collapses. This simplified version focuses on strategic resource management and temporal puzzle-solving in an accessible format.
+Chrono-Sync is a text-based temporal anomaly resolution game where you play as a Temporal Analyst tasked with stabilizing collapsing timelines. Navigate through different eras, resolve paradoxes, and prevent the complete unraveling of reality!
+
+## Game Overview
+
+In Chrono-Sync, you'll:
+
+- Discover temporal entities displaced from their native eras
+- Resolve paradoxes caused by these displaced entities
+- Manage timeline stability and chrono energy resources
+- Jump between historical eras to contain anomalies
+- Deal with temporal events that can help or hinder your mission
+
+The fate of the timeline rests in your hands!
+
+## Features
+
+- 🌌 **Temporal Management Gameplay**: Balance timeline stability against chrono energy
+- 🕰️ **Multiple Historical Eras**: Travel from Jurassic Period to Distant Future
+- 👾 **Diverse Temporal Entities**: Quantum Pharaohs, Steam-Powered AIs, and more
+- ⚡ **Dynamic Events**: Temporal rifts, chrono-storms, and paradox cascades
+- 🧩 **Paradox Resolution Minigames**: Test your temporal tuning skills
+- 💾 **Save/Load System**: Preserve your timeline progress
+- 📊 **Detailed Status Display**: Visual progress bars and entity statuses
 
 ## Installation
 
@@ -10,207 +32,217 @@ Chrono-Sync is a unique terminal-based time manipulation game where you play as 
 
 ```bash
 git clone https://github.com/piter231/chrono_sync.git
+```
+
+2. Navigate to the project directory:
+
+```bash
 cd chrono_sync
 ```
 
-2. Run the game:
+3. Run the game:
 
 ```bash
 python main.py
 ```
 
-## Game Overview
+## Requirements
 
-You are a Temporal Analyst responsible for maintaining the integrity of the timeline. Anomalous entities from different time periods have appeared, creating paradoxes that threaten to unravel reality. You must:
-
-1. Discover temporal entities
-2. Resolve their paradoxes
-3. Manage timeline stability
-4. Prevent temporal collapse
-
-## Game Rules
-
-### Core Resources
-
-- **Timeline Stability (0-100)**:
-  - Decreases by 1-2 each turn
-  - Game ends if reaches 0 (collapse)
-- **Chrono Energy (0-100)**:
-  - Increases by 1-2 each turn
-  - Required for all actions
-
-### Temporal Entities
-
-6 entities with:
-
-- **Name**: Unique identifier
-- **Paradox Value (ΔP)**: Difficulty (3-7)
-- **Time Period**: Historical era
-- **Status**: ✓ (resolved) or ✗ (unresolved)
-
-### Game Controls
-
-| Action             | Key | Energy Cost | Effect                        |
-| ------------------ | --- | ----------- | ----------------------------- |
-| Scan for Anomalies | 1   | 10          | Discovers new entities        |
-| Resolve Paradox    | 2   | ΔP × 4      | Starts resolution minigame    |
-| Time Jump          | 3   | 20          | Travel to era (+10 stability) |
-| Stabilize Timeline | 4   | 25          | Boost stability 15-25 points  |
-| Paradox Report     | 5   | Free        | Show resolution progress      |
-| Quit Game          | 0   | Free        | End simulation                |
+- Python 3.6 or higher
+- No additional dependencies required
 
 ## How to Play
 
-### Basic Flow
+### Core Mechanics
 
-1. Each turn, stability decreases (1-2) and energy increases (1-2)
-2. Choose actions to:
-   - Discover entities (Scan)
-   - Resolve paradoxes (Resolve)
-   - Stabilize timeline (Stabilize/Time Jump)
-3. Win by resolving all paradoxes before stability reaches 0
+- **Timeline Stability**: Keep this above 0% to avoid game over
+- **Chrono Energy**: Required for all major actions
+- **Entities**: Discover and resolve paradoxes to stabilize the timeline
+- **Events**: Temporal phenomena with various effects on gameplay
 
-### Paradox Resolution Minigame
-
-When resolving:
-
-1. Guess a "temporal frequency" (1-5)
-2. You have 2 attempts
-3. Feedback:
-   - Exact match: Success!
-   - Off by 1: "Close! Adjust slightly"
-   - Off by 2+: "Way off! Try different approach"
-
-**Example:**
+### Basic Controls
 
 ```
-Resolving Neo-Dinosaur's paradox...
-Match the frequency (1-5)
-
-Attempts left: 2
-Enter frequency: 3
-Close! Adjust slightly
-
-Attempts left: 1
-Enter frequency: 4
-Success! Paradox resolved.
-```
-
-### Time Jump Mechanics
-
-- Travel to historical eras:
-  1. ANCIENT EGYPT
-  2. JURASSIC
-  3. FEUDAL JAPAN
-  4. VICTORIAN
-  5. PRESENT
-  6. NEAR FUTURE
-  7. DISTANT FUTURE
-- Costs 20 energy
-- Boosts stability by 10 points
-
-## Strategy Guide
-
-1. **Early Game**: Scan to discover all entities
-2. **Prioritize**: Resolve low ΔP paradoxes first
-3. **Stability Management**:
-   - Use Stabilize when below 50
-   - Time Jump when both energy and stability low
-4. **Minigame Strategy**:
-   - Start with 3 (statistically optimal)
-   - If "Close", try adjacent numbers
-   - If "Way off", try opposite end of range
-5. **Energy Conservation**: Balance resolution attempts with stabilization
-
-## Win Conditions
-
-- **Win**: Resolve all paradoxes
-- **Lose**: Timeline stability reaches 0
-
-## Game Screens
-
-**Main Interface:**
-
-```
--------------------------------------------------------------------------------
-TEMPORAL ENTITIES:
-Quantum Phar [✓] ΔP=4  Neo-Dinosaur [✗] ΔP=6
-Steam-Power  [✗] ΔP=5  Digital Ghos [✓] ΔP=3
--------------------------------------------------------------------------------
-Last action: Scanning for anomalies
-Result: Discovered: Time-Displaced Samurai
--------------------------------------------------------------------------------
 ACTIONS:
 1. Scan anomalies  2. Resolve paradox  3. Time jump
-4. Stabilize       5. Paradox report   0. Quit
+4. Contain entity  5. Stabilize       6. Analyze
+7. Paradox report  8. Event info      9. Save/Load
+0. Quit
 ```
 
-**Paradox Report:**
+### Detailed Action Information
 
-```
-PARADOX RESOLUTION REPORT
--------------------------------------------------------------------------------
-Resolved: 2/5
-  ✓ Quantum Pharaoh
-  ✓ Digital Ghost
+#### 1. Scan Anomalies
 
-Unresolved: 3/5
-  ✗ Steam-Powered AI (ΔP=5)
-  ✗ Neo-Dinosaur (ΔP=6)
-  ✗ Time-Displaced Samurai (ΔP=5)
-```
+- **Cost**: 15 energy
+- **Effects**:
+  - 40% chance to discover a new temporal entity
+  - Otherwise, makes a random absent entity present
+- **Strategy**: Essential for discovering entities and making them available for resolution
 
-**End Game:**
+#### 2. Resolve Paradox
 
-```
-          TIMELINE STABILIZED
-   Congratulations, Temporal Analyst!
+The core puzzle mechanic where you neutralize temporal anomalies through frequency matching.
 
-You successfully resolved all paradoxes
-        Resolved: 5 paradoxes
-        Final Stability: 68%
+- **Cost**: Entity's Paradox Value (ΔP) × 5 energy
+- **Requirements**:
+  - Entity must be present
+  - Entity must not already be resolved
+- **Minigame**:
 
-   Thank you for playing CHRONO-SYNC
-```
+  ```
+  Resolving Quantum Pharaoh's paradox...
+  Match the frequency to neutralize the temporal anomaly
 
-## Customization
+  Attempts left: 3
+  Enter frequency (1-10):
+  ```
 
-Modify game parameters in `main.py`:
+- **Mechanics**:
+  - 3 attempts to guess a random target (1-10)
+  - Feedback system:
+    - `Correct`: Exact match - paradox resolved!
+    - `Close`: Guess within ±2 of target (e.g., target=5 → 3-7)
+    - `Way off`: Guess ≥3 away from target
+- **Success Effects**:
+  - Paradox resolved (✓)
+  - +10% timeline stability
+- **Failure Effects**:
+  - Lose ΔP × 2 energy
+  - -5% timeline stability
+- **Strategy Tips**:
+  - Start with 5 (middle value)
+  - After "close" feedback, adjust by 1-2 points
+  - After "way off" feedback, make larger adjustments
 
-```python
-# Difficulty adjustments
-self.timeline_stability = 100  # Starting stability
-self.chrono_energy = 50        # Starting energy
+#### 3. Time Jump
 
-# Entity pool (add/remove entities)
-self.entity_pool = [
-    TemporalEntity("Quantum Pharaoh", 4, "ANCIENT EGYPT"),
-    TemporalEntity("Steam-Powered AI", 5, "VICTORIAN ERA"),
-    # ... other entities ...
-]
+- **Cost**: 25 + (distance × 5) energy
+  - Distance = difference in positions between current and target era
+- **Effects**:
+  - Travel to selected era
+  - Makes all entities from that era present
+  - 30% chance to cause -5% to -10% stability
+- **Strategy**: Use to access specific entities or contain era-specific anomalies
 
-# Energy costs
-SCAN_ENERGY = 10
-RESOLVE_MULTIPLIER = 4
-JUMP_ENERGY = 20
-STABILIZE_ENERGY = 25
-```
+#### 4. Contain Entity
 
-## Requirements
+- **Cost**: 20 energy
+- **Requirements**: Entity must be present
+- **Effects**:
+  - Removes entity from present timeline
+  - If resolved: +5% stability
+  - If unresolved: No stability change
+- **Strategy**: Temporary solution for unstable situations with unresolved entities
 
-- Python 3.6+
-- Windows, macOS, or Linux
-- Terminal with basic text support
+#### 5. Stabilize Timeline
+
+- **Cost**: 30 energy
+- **Effects**: +15% to +25% stability (random)
+- **Strategy**: Efficient way to convert energy to stability when needed
+
+#### 6. Analyze Timeline
+
+- **Cost**: Free
+- **Effects**:
+  - Reveals a random hidden entity (if any)
+  - If no hidden entities, predicts a future event
+- **Strategy**: Use when you need more information before taking costly actions
+
+#### 7. Paradox Report
+
+- **Cost**: Free
+- **Effects**: Shows detailed report of resolved/unresolved entities
+- **Strategy**: Essential for planning your paradox resolution strategy
+
+#### 8. Event Info
+
+- **Cost**: Free
+- **Effects**: Shows information about active and predicted events
+- **Strategy**: Monitor events that could significantly impact your timeline
+
+#### 9. Save/Load
+
+- **Cost**: Free
+- **Effects**: Save or load your game state
+- **Strategy**: Preserve your progress before risky actions
+
+#### 0. Quit
+
+- **Cost**: Free
+- **Effects**: Exit the game
+
+### Turn-Based Changes
+
+Each turn automatically:
+
+- **Stability decreases**: 1-3%
+- **Energy increases**: 1-2 (capped at 100)
+
+### Entity Paradox Values (ΔP)
+
+| Entity                 | ΔP  | Era                  | Native Era Bonus |
+| ---------------------- | --- | -------------------- | ---------------- |
+| Quantum Pharaoh        | 8   | Ancient Egypt        | ±1 → ±3 range    |
+| Steam-Powered AI       | 7   | Victorian Era        | ±1 → ±3 range    |
+| Neo-Dinosaur           | 9   | Jurassic Period      | ±1 → ±3 range    |
+| Digital Ghost          | 6   | Near Future          | ±1 → ±3 range    |
+| Time-Displaced Samurai | 7   | Feudal Japan         | ±1 → ±3 range    |
+| AI Overlord            | 10  | Distant Future       | ±1 → ±3 range    |
+| Cybernetic Viking      | 8   | Medieval Scandinavia | ±1 → ±3 range    |
+| Prehistoric Botanist   | 6   | Cretaceous Period    | ±1 → ±3 range    |
+| Renaissance Android    | 7   | Renaissance Italy    | ±1 → ±3 range    |
+| Post-Apocalyptic Bard  | 5   | Post-Apocalypse      | ±1 → ±3 range    |
+
+_Native Era Bonus: "Close" range expands to ±3 when resolving in entity's native era_
+
+## Gameplay Tips
+
+- **Frequency Strategy**:
+  - First guess: 5 (middle value)
+  - After "close": Adjust by 1-2 points
+  - After "way off": Jump to opposite half of scale
+- **Energy Management**: Always maintain enough energy for critical actions
+- **Priority Targeting**: Focus on high-ΔP entities first for maximum stability gains
+- **Strategic Jumping**: Plan era jumps to minimize distance costs
+- **Native Era Advantage**: Resolve entities in their home eras for easier minigame
+- **Event Awareness**: Temporal events can dramatically change game conditions
+- **Containment Strategy**: Use containment for temporary relief with unresolved entities
+- **Regular Scanning**: Discover new entities early to prevent surprises
+- **Save Often**: Preserve your progress before risky paradox resolution attempts
+
+## Paradox Resolution Examples
+
+**Scenario 1: Target = 5**
+
+- Guess 5: "Correct!" - Paradox resolved
+- Guess 4: "Close! Adjust slightly"
+- Guess 6: "Close! Adjust slightly"
+- Guess 3: "Close! Adjust slightly" (in native era)
+- Guess 1: "Way off! Try different approach"
+
+**Scenario 2: Target = 8**
+
+- Guess 5: "Way off! Try different approach"
+- Guess 9: "Close! Adjust slightly"
+- Guess 8: "Correct!" - Paradox resolved
+
+## Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-[MIT License](LICENSE) - Free to modify and distribute
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Repository
+## Support
 
-[https://github.com/piter231/chrono_sync](https://github.com/piter231/chrono_sync)
+For issues or feature requests, please open an issue on the [GitHub repository](https://github.com/piter231/chrono_sync/issues).
 
-```
-     CHRONO-SYNC: TEMPORAL PARADOX SOLVER
-  Resolve anomalies before time unravels...
-```
+---
